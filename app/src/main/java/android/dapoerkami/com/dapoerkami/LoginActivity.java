@@ -51,6 +51,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
 
+        final Intent intent = new Intent(this, HomeActivity.class);
+
         if (email.isEmpty()) {
             editTextEmail.setError("Email is required");
             editTextEmail.requestFocus();
@@ -85,6 +87,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if (task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, "Successfully Login", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
+
+                            startActivity(intent);
+
                         } else {
                             Toast.makeText(LoginActivity.this, "Failed, Try Again", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
