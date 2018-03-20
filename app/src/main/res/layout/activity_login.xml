@@ -8,15 +8,17 @@
     tools:context="android.dapoerkami.com.dapoerkami.LoginActivity">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:src="@drawable/dapoerkami_logo"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:hint="Email"
+        android:textSize="20sp"
         android:inputType="textEmailAddress"
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
@@ -26,6 +28,7 @@
     <EditText
         android:id="@+id/editTextPassword"
         android:hint="Password"
+        android:textSize="20sp"
         android:inputType="textPassword"
         android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
@@ -35,22 +38,34 @@
     <Button
         android:id="@+id/buttonSignIn"
         android:text="Sign In"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="100dp"
-        android:paddingRight="100dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="120dp"
+        android:paddingRight="120dp"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="#0066FF"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
         android:id="@+id/buttonSignUp"
         android:text="Sign Up"
-        android:paddingLeft="100dp"
-        android:paddingRight="100dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="120dp"
+        android:paddingRight="120dp"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onSignUp"/>
-
+        android:onClick="onSignUp"
+        android:background="#FF339966"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
 </LinearLayout>

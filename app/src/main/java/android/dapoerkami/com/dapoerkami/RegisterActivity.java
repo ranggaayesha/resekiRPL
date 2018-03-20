@@ -1,6 +1,7 @@
 package android.dapoerkami.com.dapoerkami;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -15,12 +16,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class RegisterActivity extends AppCompatActivity implements  View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editTextEmail;
     private EditText editTextPassword;
     private Button buttonRegister;
-
 
     ProgressDialog progressDialog;
 
@@ -40,11 +40,15 @@ public class RegisterActivity extends AppCompatActivity implements  View.OnClick
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(this);
+
+
     }
 
     private void registerUser() {
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
+
+        final Intent intent = new Intent(this, LoginActivity.class);
 
         if (email.isEmpty()) {
             editTextEmail.setError("Email is required");
@@ -79,17 +83,19 @@ public class RegisterActivity extends AppCompatActivity implements  View.OnClick
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-
-                            Toast.makeText(RegisterActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Successfully Registered, You can Sign In now !", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
+
+                            startActivity(intent);
+
                         } else {
                             Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
                         }
                     }
                 });
-
     }
+
     @Override
     public void onClick(View view) {
         if (view == buttonRegister) {
@@ -98,3 +104,9 @@ public class RegisterActivity extends AppCompatActivity implements  View.OnClick
     }
 
 }
+
+
+
+
+
+
