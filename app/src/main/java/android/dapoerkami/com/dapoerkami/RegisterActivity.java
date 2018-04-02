@@ -20,6 +20,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private EditText editTextEmail;
     private EditText editTextPassword;
+    private EditText editTextConfirmPassword;
     private Button buttonRegister;
 
     ProgressDialog progressDialog;
@@ -37,16 +38,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        editTextConfirmPassword = (EditText) findViewById(R.id.editTextPassword1);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(this);
-
 
     }
 
     private void registerUser() {
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
+        String confirmPassword = editTextConfirmPassword.getText().toString();
 
         final Intent intent = new Intent(this, LoginActivity.class);
 
@@ -71,6 +73,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (password.length() < 6) {
             editTextPassword.setError("Minimum lenght of password should be 6");
             editTextPassword.requestFocus();
+            return;
+        }
+
+        if (!(confirmPassword.equals(password))) {
+            editTextConfirmPassword.setError("Confirm password did not match!");
+            editTextConfirmPassword.requestFocus();
             return;
         }
 
