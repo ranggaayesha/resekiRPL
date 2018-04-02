@@ -1,6 +1,8 @@
-package android.dapoerkami.com.dapoerkami;
+package android.dapoerkami.com.dapoerkami.splash;
 
 import android.content.Intent;
+import android.dapoerkami.com.dapoerkami.login.LoginActivity;
+import android.dapoerkami.com.dapoerkami.R;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
