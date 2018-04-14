@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.support.v4.app.Fragment;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,6 +30,11 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 
 public class PostActivity extends AppCompatActivity {
+
+    PopularAdapter adapter;
+
+
+    public PostActivity() {}
 
     //a constant to track the file chooser intent
     private static final int PICK_IMAGE_REQUEST = 234;
