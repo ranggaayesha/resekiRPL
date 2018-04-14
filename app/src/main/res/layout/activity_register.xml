@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="android.dapoerkami.com.dapoerkami.register.RegisterActivity">
+    tools:context="android.dapoerkami.com.dapoerkami.RegisterActivity">
 
     <TextView
         android:paddingLeft="20dp"

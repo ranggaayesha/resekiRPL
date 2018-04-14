@@ -1,10 +1,8 @@
-package android.dapoerkami.com.dapoerkami.login;
+package android.dapoerkami.com.dapoerkami;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.dapoerkami.com.dapoerkami.HomeActivity;
-import android.dapoerkami.com.dapoerkami.R;
-import android.dapoerkami.com.dapoerkami.register.RegisterActivity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -54,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
 
-        final Intent intent = new Intent(this, HomeActivity.class);
+        final Intent intent = new Intent(this, MainActivity.class);
 
         if (email.isEmpty()) {
             editTextEmail.setError("Email is required");

@@ -1,9 +1,7 @@
-package android.dapoerkami.com.dapoerkami.register;
+package android.dapoerkami.com.dapoerkami;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.dapoerkami.com.dapoerkami.R;
-import android.dapoerkami.com.dapoerkami.login.LoginActivity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
