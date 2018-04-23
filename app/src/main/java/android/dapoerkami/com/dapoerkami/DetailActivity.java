@@ -93,7 +93,6 @@ public class DetailActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
-
             message = detailComment.getText().toString();
 
             String commentId = database.push().getKey();
@@ -104,7 +103,6 @@ public class DetailActivity extends AppCompatActivity {
             comment.setMessage(message);
 
             database.child(commentId).setValue(comment);
-
             return null;
         }
 
@@ -120,7 +118,6 @@ public class DetailActivity extends AppCompatActivity {
 
         DatabaseReference databaseReference;
         CommentAdapter adapter;
-
 
         @Override
         protected Void doInBackground(Void... voids) {
