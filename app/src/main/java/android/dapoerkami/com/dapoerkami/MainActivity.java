@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new RecentFragment(), "Home");
+        adapter.addFragment(new RemindToCook(), "Remind To Cook");
 
         viewPager.setAdapter(adapter);
     }

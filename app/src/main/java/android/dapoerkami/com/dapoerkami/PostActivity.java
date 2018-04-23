@@ -62,7 +62,7 @@ public class PostActivity extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         storageReference = FirebaseStorage.getInstance().getReference();
-        FirebaseDatabase.getInstance().getReference("app_title").setValue("Popotoan");
+        FirebaseDatabase.getInstance().getReference("app_title").setValue("DapoerKami");
 
         postTitle = findViewById(R.id.postTitle);
         postDesc = findViewById(R.id.postDescription);

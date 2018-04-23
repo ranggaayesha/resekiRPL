@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0099cc">
+
+    <TextView
+        android:id="@+id/remindtocook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="When I Cook, Buddy?"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="28sp"
+        android:textColor="#FFF"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark your date"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0099cc">
+
+        <CalendarView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_calendar"
+            android:layout_gravity="center">
+
+        </CalendarView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
