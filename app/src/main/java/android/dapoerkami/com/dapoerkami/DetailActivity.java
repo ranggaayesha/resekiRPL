@@ -20,8 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Comment;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -96,6 +94,17 @@ public class DetailActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
 
+            message = detailComment.getText().toString();
+
+            String commentId = database.push().getKey();
+
+            Comment comment = new Comment();
+            comment.setPostId(postId);
+            comment.setUsername(username);
+            comment.setMessage(message);
+
+            database.child(commentId).setValue(comment);
+
             return null;
         }
 
@@ -110,6 +119,7 @@ public class DetailActivity extends AppCompatActivity {
     public class LoadComment extends AsyncTask<Void, String, Void> {
 
         DatabaseReference databaseReference;
+        CommentAdapter adapter;
 
 
         @Override
@@ -121,10 +131,13 @@ public class DetailActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         Comment comment = snapshot.getValue(Comment.class);
-
+                        if (comment.getPostId().equalsIgnoreCase(postId)) {
+                            comments.add(comment);
+                        }
                     }
 
-
+                    adapter = new CommentAdapter(DetailActivity.this, comments);
+                    recyclerComment.setAdapter(adapter);
                 }
 
                 @Override
