@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         // TAB HOME
         adapter.addFragment(new RecentFragment(), "Home");
+
+        viewPager.setAdapter(adapter);
     }
 
     @Override
