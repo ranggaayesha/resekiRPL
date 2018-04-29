@@ -45,7 +45,7 @@ public class PostActivity extends AppCompatActivity {
     FloatingActionButton fabAddPost;
 
     private StorageReference storageReference;
-    private DatabaseReference databaseReference;
+    DatabaseReference databaseReference;
     private Uri filePath;
 
     FirebaseUser user;

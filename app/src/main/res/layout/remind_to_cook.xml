@@ -5,28 +5,45 @@
     android:orientation="vertical"
     android:background="#0099cc">
 
+    <ImageView
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/remindme"
+        android:layout_gravity="center"/>
+
     <TextView
         android:id="@+id/remindtocook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="When I Cook, Buddy?"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:textSize="28sp"
         android:textColor="#FFF"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="5dp"/>
 
     <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mark your date"
+        android:text="Mark your date, now!!!"
         android:textStyle="italic"
         android:textSize="20sp"
         android:textColor="#FFF"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It's good to set 3 days before the main event "
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:textColor="#FFF"
         android:layout_gravity="center"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="20dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,15 +51,16 @@
         android:layout_gravity="center"
         android:background="#0099cc">
 
-        <CalendarView
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_calendar"
-            android:layout_gravity="center">
-
-        </CalendarView>
-
     </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="Remind Me"
+        android:background="@drawable/bg_calendar"
+        android:id="@+id/remind"/>
 
 
 </LinearLayout>

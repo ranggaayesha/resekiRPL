@@ -13,10 +13,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-/**
- * Created by Afif on 14/04/2018.
- */
-
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
     Context context;
     List<Post> posts;
@@ -46,7 +42,6 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-
         return posts.size();
     }
 

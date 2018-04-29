@@ -2,6 +2,9 @@ package android.dapoerkami.com.dapoerkami;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.dapoerkami.com.dapoerkami.PostActivity;
+import android.dapoerkami.com.dapoerkami.R;
+import android.dapoerkami.com.dapoerkami.RecentFragment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -59,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new RecentFragment(), "Home");
         adapter.addFragment(new RemindToCook(), "Remind To Cook");
-
         viewPager.setAdapter(adapter);
     }
 

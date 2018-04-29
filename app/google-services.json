@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "694315947606",
-    "firebase_url": "https://dapoerkami-telu.firebaseio.com",
-    "project_id": "dapoerkami-telu",
-    "storage_bucket": "dapoerkami-telu.appspot.com"
+    "project_number": "440445884190",
+    "firebase_url": "https://dapoerkami-rpl.firebaseio.com",
+    "project_id": "dapoerkami-rpl",
+    "storage_bucket": "dapoerkami-rpl.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:694315947606:android:cb10900d6801eb33",
+        "mobilesdk_app_id": "1:440445884190:android:cb10900d6801eb33",
         "android_client_info": {
           "package_name": "android.dapoerkami.com.dapoerkami"
         }
       },
       "oauth_client": [
         {
-          "client_id": "694315947606-bmtamq2kbutb7et58gmeoubdatenln2p.apps.googleusercontent.com",
+          "client_id": "440445884190-ilrqhj2tuglretv6i6sivm0ut3t3vuh1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyChK51nQQDeyAjRH0WeC6rfiMTkPzg5h_A"
+          "current_key": "AIzaSyAIxdtexmyp-YYdmOSHGkWKqEU0nvpVBTg"
         }
       ],
       "services": {
