@@ -1,5 +1,8 @@
 package android.dapoerkami.com.dapoerkami;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Afif on 14/04/2018.
  */
@@ -10,6 +13,8 @@ public class Post {
     private String photo;
     private String photoTitle;
     private String photoDesc;
+    public String star;
+    private int starCount = 0;
 
     public String getPostId() {
         return postId;
@@ -48,4 +53,12 @@ public class Post {
     }
 
     public void setPhotoDesc(String photoDesc) { this.photoDesc = photoDesc; }
+
+    public String getStar() { return star; }
+
+    public void setStar(String star) { this.star = star; }
+
+    public int getStarCount() { return starCount; }
+
+    public void setStarCount(int startCount) { this.starCount = startCount; }
 }

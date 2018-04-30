@@ -1,5 +1,6 @@
 package android.dapoerkami.com.dapoerkami;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView detailUsername, detailTitle, detailDesc;
     ImageView detailPhoto;
     EditText detailComment;
-    Button buttonComment;
+    Button buttonComment, buttonShare;
 
     RecyclerView recyclerComment;
     List<Comment> comments;
@@ -45,6 +46,8 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        buttonShare = (Button) findViewById(R.id.shareButton);
 
         database = FirebaseDatabase.getInstance().getReference("comments");
 
@@ -77,7 +80,18 @@ public class DetailActivity extends AppCompatActivity {
                 new PostComment().execute();
             }
         });
+
+        buttonShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, MainActivity3.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 
     private void referencing() {
         detailUsername = findViewById(R.id.detailUsername);
@@ -88,6 +102,7 @@ public class DetailActivity extends AppCompatActivity {
         buttonComment = findViewById(R.id.buttonPostComment);
         recyclerComment = findViewById(R.id.recyclerComment);
     }
+
 
     public class PostComment extends AsyncTask<Void, String, Void> {
 
@@ -145,4 +160,5 @@ public class DetailActivity extends AppCompatActivity {
             return null;
         }
     }
+
 }

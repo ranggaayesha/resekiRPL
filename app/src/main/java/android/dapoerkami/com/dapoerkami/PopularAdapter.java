@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -32,12 +36,13 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Post post = posts.get(position);
+        final Post post = posts.get(position);
         holder.recentUsername.setText(post.getUsername());
         holder.recentPhotoTitle.setText(post.getPhotoTitle());
         holder.recentPhotoDesc.setText(post.getPhotoDesc());
 
         Picasso.get().load(post.getPhoto()).into(holder.recentPhoto);
+
     }
 
     @Override
@@ -45,6 +50,8 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         return posts.size();
     }
 
+
+    // INNER CLASS
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView recentUsername, recentPhotoDesc, recentPhotoTitle;

@@ -45,4 +45,7 @@
     <string name="editor_update_reminder_failed">Error with updating reminder</string>
 
     <string name="reminder_title">AlarmReminder</string>
+
+    <string name="facebook_app_id">461245477628302</string>
+    <string name="facebook_login_protocol_scheme">fb461245477628302</string>
 </resources>
