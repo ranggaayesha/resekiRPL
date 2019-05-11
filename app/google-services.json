@@ -25,15 +25,42 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440445884190-ilrqhj2tuglretv6i6sivm0ut3t3vuh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440445884190:android:2b3849bc48beebee",
+        "android_client_info": {
+          "package_name": "android.reseki.com.reseki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440445884190-ilrqhj2tuglretv6i6sivm0ut3t3vuh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIxdtexmyp-YYdmOSHGkWKqEU0nvpVBTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440445884190-ilrqhj2tuglretv6i6sivm0ut3t3vuh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

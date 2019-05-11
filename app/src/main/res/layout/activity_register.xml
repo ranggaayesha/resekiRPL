@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="android.dapoerkami.com.dapoerkami.RegisterActivity">
+    tools:context="android.reseki.com.reseki.RegisterActivity">
 
     <TextView
         android:paddingLeft="20dp"
@@ -20,15 +20,15 @@
         android:text="CREATE ACCOUNT" />
 
     <TextView
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Reseki"
+        android:textAlignment="center"
+        android:textColor="#263238"
         android:textSize="23sp"
-        android:textStyle="bold|italic"
-        android:textColor="#099999"
-        android:text="Dapoer Kami" />
+        android:textStyle="bold|italic" />
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -62,16 +62,16 @@
 
     <Button
         android:id="@+id/buttonRegister"
-        android:layout_marginTop="30dp"
         android:layout_width="250dp"
-        android:paddingTop="17dp"
-        android:paddingBottom="17dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="#FF339966"
+        android:layout_marginTop="30dp"
+        android:background="#e5003e"
+        android:paddingBottom="17dp"
+        android:paddingTop="17dp"
         android:text="Register"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+        android:textStyle="bold" />
 
 </LinearLayout>
